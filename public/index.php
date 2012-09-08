@@ -1,12 +1,12 @@
 <?php
+namespace Funk;
 
-spl_autoload_register(function( $name ){
-    require_once str_replace('\\', '/', $name) . '.php';
-});
+// It's probably best that Steel is added to the path in PHP.  If this isn't possible, you can set it
+// by calling setIncludePath().  You can also add in additional include paths.
+require '../Steel/Bootstrap.php';
 
-set_include_path(
-    __DIR__ . '/../' .
-    get_include_path()
-);
+// Steel\Bootstrap assumes that it's location is in the base directory of Steel.
+$bootstrap = \Steel\Bootstrap::init()->setIncludePath();
 
-Steel\Application::start()->run();
+
+\Steel\Application::start()->run();
