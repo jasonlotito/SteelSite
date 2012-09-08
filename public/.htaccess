@@ -1,0 +1,14 @@
+php_value include_path ".:/Users/jasonlotito/Projects/SteelSite:/Applications/MAMP/bin/php/php5.4.4/lib/php"
+
+SetEnvIfNoCase Host "steel.dev" \
+    STEEL_APPLICATION_ENV=development \
+    STEEL_APPLICATION_DIR=Steel \
+    STEEL_CONFIG_DIR=Config \
+    STEEL_CONFIG_EXT=.dev.xml
+
+SetEnvIfNoCase Host "steel.prod" \
+    STEEL_APPLICATION_ENV=production \
+    STEEL_APPLICATION_DIR=Steel \
+    STEEL_CONFIG_DIR=Config \
+    STEEL_CONFIG_EXT=.xml
+
