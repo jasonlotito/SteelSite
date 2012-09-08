@@ -7,7 +7,7 @@ SetEnvIfNoCase Host "steel" \
     STEEL_APPLICATION_DIR=Steel \
     STEEL_APPLICATION_ENV=default \
     \
-    STEEL_CONFIG_CORE=Core \
+    STEEL_CONFIG_CORE=Config \
     STEEL_CONFIG_DIR=/Users/jasonlotito/Projects/SteelSite/Config \
     STEEL_CONFIG_EXT=.xml \
     \
