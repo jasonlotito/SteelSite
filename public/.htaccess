@@ -1,14 +1,43 @@
 php_value include_path ".:/Users/jasonlotito/Projects/SteelSite:/Applications/MAMP/bin/php/php5.4.4/lib/php"
 
-SetEnvIfNoCase Host "steel.dev" \
+# Default Configuration
+SetEnvIfNoCase Host "steel" \
+    STEEL_APPLICATION_CONF=0 \
+    STEEL_APPLICATION_DEBUG=0 \
+    STEEL_APPLICATION_DIR=Steel \
+    STEEL_APPLICATION_ENV=default \
+    \
+    STEEL_CONFIG_CORE=Core \
+    STEEL_CONFIG_DIR=/Users/jasonlotito/Projects/SteelSite/Config \
+    STEEL_CONFIG_EXT=.xml \
+    \
+    STEEL_ERROR_DISPLAY=0
+
+# Dev/Debugging Configuration
+SetEnvIfNoCase Host "steel.dbg|steel.dev" \
     STEEL_APPLICATION_ENV=development \
-    STEEL_APPLICATION_DIR=Steel \
-    STEEL_CONFIG_DIR=Config \
-    STEEL_CONFIG_EXT=.dev.xml
+    \
+    STEEL_CONFIG_EXT=.dev.xml \
+    \
+    STEEL_ERROR_DISPLAY=-1
 
+# Debugging Configuration
+SetEnvIfNoCase Host "steel.dbg" \
+    STEEL_APPLICATION_DEBUG=1
+
+# Test Configuration
+
+# Staging Configuration
+
+# Production Configuration
 SetEnvIfNoCase Host "steel.prod" \
-    STEEL_APPLICATION_ENV=production \
     STEEL_APPLICATION_DIR=Steel \
-    STEEL_CONFIG_DIR=Config \
-    STEEL_CONFIG_EXT=.xml
+    STEEL_APPLICATION_ENV=production
 
+# Front Controller Routing
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ /index.php [NC,L]
