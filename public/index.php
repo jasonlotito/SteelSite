@@ -24,9 +24,10 @@ class Anvil
      */
     public function __construct(array $config)
     {
-        $this->importConfig($config);
-        $this->loadBootstrap();
+        $this->initConfig($config);
+        $this->initBootstrap();
         var_dump($this->config);
+        var_dump($_SERVER);
     }
 
     /**
@@ -34,7 +35,7 @@ class Anvil
      *
      * @return void
      */
-    protected function loadBootstrap()
+    protected function initBootstrap()
     {
         \Steel\Bootstrap::init();
     }
@@ -45,17 +46,30 @@ class Anvil
      * @param array $config
      * @return void
      */
-    protected function importConfig(array $config)
+    protected function initConfig(array $config)
     {
         $this->config = [
+            // _ENGINE : Steel configuration
+            'allowUrlMethods' => (boolean) $config['STEEL_ENGINE_ALLOW_URL_METHODS'],
+
+            // _APPLICATION : Application configuration
+            'applicationBase' => $config['STEEL_APPLICATION_BASE'],
             'applicationConf' => (boolean) $config['STEEL_APPLICATION_CONF'],
             'applicationDebug' => (boolean) $config['STEEL_APPLICATION_DEBUG'],
             'applicationDir' => $config['STEEL_APPLICATION_DIR'],
             'applicationEnv' => $config['STEEL_APPLICATION_ENV'],
+
+            // _CONFIG : Configuration file config
             'configCore' => $config['STEEL_CONFIG_CORE'],
             'configDir' => $config['STEEL_CONFIG_DIR'],
             'configExt' => $config['STEEL_CONFIG_EXT'],
-            'errorDisplay' => $config['STEEL_ERROR_DISPLAY'],
+            'configFiles' => $config['STEEL_CONFIG_FILES'],
+
+            // _ERROR : Error handling config
+            'errorDisplay' => (int) $config['STEEL_ERROR_DISPLAY'],
+
+            // _LIB : Steel library config
+            'libDir' => $config['STEEL_LIB_DIR'],
         ];
     }
 

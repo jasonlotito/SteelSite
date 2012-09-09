@@ -2,6 +2,7 @@ php_value include_path ".:/Users/jasonlotito/Projects/SteelSite:/Applications/MA
 
 # Default Configuration
 SetEnvIfNoCase Host "steel" \
+    STEEL_APPLICATION_BASE=/Users/jasonlotito/Projects/SteelSite \
     STEEL_APPLICATION_CONF=0 \
     STEEL_APPLICATION_DEBUG=0 \
     STEEL_APPLICATION_DIR=Steel \
@@ -10,14 +11,22 @@ SetEnvIfNoCase Host "steel" \
     STEEL_CONFIG_CORE=Config \
     STEEL_CONFIG_DIR=/Users/jasonlotito/Projects/SteelSite/Config \
     STEEL_CONFIG_EXT=.xml \
+        STEEL_CONFIG_FILES[Routes]=Routes \
+        STEEL_CONFIG_FILES[Database]=Database \
     \
-    STEEL_ERROR_DISPLAY=0
+    STEEL_ENGINE_ALLOW_URL_METHODS=0 \
+    \
+    STEEL_ERROR_DISPLAY=0 \
+    \
+    STEEL_LIB_DIR[Steel]=/Users/jasonlotito/Projects/SteelSite/Steel
 
 # Dev/Debugging Configuration
 SetEnvIfNoCase Host "steel.dbg|steel.dev" \
     STEEL_APPLICATION_ENV=development \
     \
     STEEL_CONFIG_EXT=.dev.xml \
+    \
+    STEEL_ENGINE_ALLOW_URL_METHODS=1 \
     \
     STEEL_ERROR_DISPLAY=-1
 
