@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
 
+    <routerDefaults>
+        <namespace>SteelSite\Controllers</namespace>
+        <methodFunctions>
+            <method name="get">
+                <function>get</function>
+            </method>
+            <method name="post">
+                <function>post</function>
+            </method>
+            <method name="put">
+                <function>put</function>
+            </method>
+            <method name="delete">
+                <function>delete</function>
+            </method>
+            <method name="head">
+                <function>head</function>
+            </method>
+        </methodFunctions>
+    </routerDefaults>
+
+    <route>
+        <path>/</path>
+
+        <method name="get">
+            <class>Home</class>
+        </method>
+    </route>
+
+    <route>
+        <path>/member</path>
+
+        <method name="get">
+            <class>Member</class>
+            <!-- Default Method will be the name of the method: get -->
+        </method>
+
+        <route>
+            <!-- @TODO Add in ACL Control at the router level -->
+            <acl>
+                <group>admin</group>
+                <user>manager</user>
+                <user>support</user>
+            </acl>
+
+            <!-- Routes can be included in other routes. In this case, the
+             path /list is actually /member/list -->
+            <path>/list</path>
+            <method name="get">
+                <class>MemberList</class>
+            </method>
+        </route>
+
+        <route type="regex">
+            <path>/|[0-9]+|</path>
+            <method name="get">
+                <class>MemberProfile</class>
+                <function>index</function>
+            </method>
+        </route>
+    </route>
+
+
+
 </config>
