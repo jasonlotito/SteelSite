@@ -20,7 +20,9 @@
                 <function>head</function>
             </method>
         </methodFunctions>
+        <pathAppend>/?</pathAppend>
     </routerDefaults>
+
 
     <route>
         <path>/</path>
@@ -52,10 +54,20 @@
             <method name="get">
                 <class>MemberList</class>
             </method>
+
+            <route>
+                <path>/[a-zA-Z]{1}</path>
+
+                <method name="get">
+                    <class>MemberList</class>
+                    <function>section</function>
+                </method>
+            </route>
+
         </route>
 
         <route type="regex">
-            <path>/|[0-9]+|</path>
+            <path>/[0-9]+</path>
             <method name="get">
                 <class>MemberProfile</class>
                 <function>index</function>

@@ -26,8 +26,6 @@ class Anvil
     {
         $this->initConfig($config);
         $this->initBootstrap();
-        var_dump($this->config);
-        var_dump($_SERVER);
     }
 
     /**
