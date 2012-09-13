@@ -2,33 +2,33 @@
 <config>
 
     <routerDefaults>
-        <namespace>SteelSite\Controllers</namespace>
+        <namespace>SteelSite\Controllers\</namespace>
         <methodFunctions>
-            <method name="get">
-                <function>get</function>
-            </method>
-            <method name="post">
-                <function>post</function>
-            </method>
-            <method name="put">
-                <function>put</function>
-            </method>
-            <method name="delete">
-                <function>delete</function>
-            </method>
-            <method name="head">
-                <function>head</function>
-            </method>
+            <get>getAction</get>
+            <post>post</post>
+            <head>head</head>
+            <put>put</put>
+            <delete>delete</delete>
         </methodFunctions>
         <pathAppend>/?</pathAppend>
     </routerDefaults>
 
+    <route>
+        <path>/logout</path>
+    </route>
 
     <route>
         <path>/</path>
 
         <method name="get">
             <class>Home</class>
+        </method>
+    </route>
+
+    <route>
+        <path>/signup</path>
+        <method name="get">
+            <class>Signup</class>
         </method>
     </route>
 
@@ -56,7 +56,11 @@
             </method>
 
             <route>
-                <path>/[a-zA-Z]{1}</path>
+                <path>/page/[0-9]+</path>
+            </route>
+
+            <route>
+                <path>/[a-z]{1}.?</path>
 
                 <method name="get">
                     <class>MemberList</class>
