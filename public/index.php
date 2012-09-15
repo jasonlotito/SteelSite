@@ -26,6 +26,7 @@ class Anvil
     {
         $this->initConfig($config);
         $this->initBootstrap();
+        $this->initDebug();
     }
 
     /**
@@ -36,6 +37,22 @@ class Anvil
     protected function initBootstrap()
     {
         \Steel\Bootstrap::init();
+    }
+
+    protected function initDebug()
+    {
+        \Steel\Event::on('AnvilDebug', array($this, 'debug'));
+        \Steel\Event::on('ControllerFlushed', array($this, 'debug'));
+    }
+
+    public function debug( )
+    {
+        static $x = 0;
+        $x++;
+        $response = new \Steel\Response();
+        $view = \Steel\View::create('Debug');
+        $view->attach('data', range(0,20));
+        $view->render();
     }
 
     /**

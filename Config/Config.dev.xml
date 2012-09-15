@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-
+    <renderer>XSLT</renderer>
+    <baseTemplate>Base</baseTemplate>
     <!-- Cache Keys should be stored so we can bust cache
      One global cache key, and certain sections have their own so we can
      bust individual sections, possibly base it off md5 hashes of the config

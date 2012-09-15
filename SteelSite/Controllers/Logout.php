@@ -5,16 +5,16 @@ namespace SteelSite\Controllers;
 /**
  * Logout
  *
- * ${DESCRIPTION}
- *
- * @module ${MODULE}
- * @submodule ${SUBMODULE}
+ * @module Controllers
+ * @submodule Logout
  * @author Jason Lotito <jasonlotito@gmail.com>
  */
-class Logout
+class Logout extends \Steel\Controller
 {
     public function get()
     {
-        echo "This controller works!";
+        $this->attach('name', 'It works!!!');
+        $this->attach('numbers', range(1, 25));
+        $this->output();
     }
 }
