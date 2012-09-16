@@ -12,6 +12,7 @@
         <xsl:call-template name="Styles"/>
       </head>
       <body>
+        <a name="top"></a>
         <div class="container">
           <header class="row">
             <div class="navbar span12">
@@ -37,16 +38,20 @@
                   </li>
                 </ul>
 
-                <form class="navbar-form pull-right">
-                  <input type="text" class="span2"/>
+                <form id="navSearch" class="form-search pull-right form-inline">
+                  <div class="input-append">
+                  <input type="text" class="span2 search-query"/>
                   <button type="submit" class="btn">Search</button>
+                  </div>
                 </form>
               </div>
             </div>
           </header>
           <section>
             <div class="row12">
+
               <xsl:call-template name="Content"/>
+
             </div>
           </section>
           <footer class="container">

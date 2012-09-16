@@ -12,7 +12,7 @@
     <routerDefaults>
         <namespace>SteelSite\Controllers\</namespace>
         <methodFunctions>
-            <get>getAction</get>
+            <get>get</get>
             <post>post</post>
             <head>head</head>
             <put>put</put>
@@ -23,6 +23,22 @@
 
     <route>
         <path>/logout</path>
+    </route>
+
+    <route>
+      <path>/docs</path>
+      <method name="get">
+        <class>Docs</class>
+        <function>index</function>
+      </method>
+
+      <route>
+        <path>/forms</path>
+        <method name="get">
+          <class>Docs</class>
+          <function>forms</function>
+        </method>
+      </route>
     </route>
 
     <route>

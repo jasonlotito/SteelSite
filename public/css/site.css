@@ -7,6 +7,10 @@
     padding: 20px;
 }
 
+#navSearch {
+    margin: 5px 0 0 0;
+}
+
 .goals {
     /*background: -webkit-gradient(*/
         /*linear, left top, right top,*/
@@ -79,4 +83,30 @@ footer {
     background-color: rgba(33,33,33,0.5);
     padding: 10px;
     border-radius: 5px;
+}
+
+dd dl {
+    margin: 0 0 20px 0;
+}
+
+dl.attributes dd.type {
+    color: rgba(0,55,100,1);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 100%;
+}
+
+dl.attributes dd.type:before {
+    content: ' –  ';
+    color: black;
+}
+
+dl.attributes dd.optional:before {
+    content: 'Optional ';
+    color: #ff4500;
+}
+
+dl.attributes dt {
+    float: left;
+    margin-right: 10px;
 }

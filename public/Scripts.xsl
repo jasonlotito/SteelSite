@@ -1,7 +1,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template name="Scripts">
-    <script src="js/bootstrap.js"/>
+    <script src="/js/jquery.js"/>
+    <script src="/js/bootstrap.js"/>
   </xsl:template>
 
 </xsl:stylesheet>
