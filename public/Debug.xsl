@@ -3,31 +3,6 @@
               standalone="yes" omit-xml-declaration="yes"/>
   <xsl:template match="/Debug">
 
-    <style>
-      .debugger {
-        position: fixed;
-        bottom: 0;
-        background-color: #000;
-        width: 100%;
-        color: #fff;
-        height: 60px;
-        font-family: Helvetica;
-        font-size: 12px;
-      }
-      .debugger .information {
-        padding: 4px;
-      }
-    </style>
-    <div class="debugger">
-      <div class="information">
-        Debugger
-
-        <xsl:for-each select="data">
-          <xsl:value-of select="."/>,
-        </xsl:for-each>
-      </div>
-
-    </div>
   </xsl:template>
 
 </xsl:stylesheet>

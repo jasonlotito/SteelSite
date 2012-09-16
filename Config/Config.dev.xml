@@ -2,6 +2,9 @@
 <config>
     <renderer>XSLT</renderer>
     <baseTemplate>Base</baseTemplate>
+    <templatesDir></templatesDir>
+    <steel>/Users/jasonlotito/Projects/SteelSite/Steel/View/Templates</steel>
+
     <!-- Cache Keys should be stored so we can bust cache
      One global cache key, and certain sections have their own so we can
      bust individual sections, possibly base it off md5 hashes of the config

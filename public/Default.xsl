@@ -9,6 +9,18 @@
       <xsl:for-each select="/Default/numbers">
         [<xsl:value-of select="."/>]<br/>
       </xsl:for-each>
+      <xsl:for-each select="/Default/numbersD">
+        [<xsl:value-of select="."/>]<br/>
+      </xsl:for-each>
+
+      <xsl:for-each select="/Default/numbersD">
+        <xsl:for-each select="./codes">
+          [<xsl:value-of select="."/>]<br/>
+        </xsl:for-each>
+        <xsl:for-each select="./names/name">
+          [<xsl:value-of select="."/>]<br/>
+      </xsl:for-each>
+      </xsl:for-each>
     </xsl:template>
 
 </xsl:stylesheet>

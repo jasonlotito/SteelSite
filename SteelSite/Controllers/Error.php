@@ -11,13 +11,14 @@ namespace SteelSite\Controllers;
  * @submodule ${SUBMODULE}
  * @author Jason Lotito <jasonlotito@gmail.com>
  */
-class Error
+class Error extends \Steel\Controller
 {
     use \Steel\Injectors\Response;
 
     public function notFound()
     {
+        $this->view = $this->getView('NotFound');
         $this->getResponse()->notFound();
-        echo "This is a 404 page";
+        $this->output();
     }
 }
