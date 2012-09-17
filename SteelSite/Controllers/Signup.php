@@ -2,13 +2,13 @@
 
 namespace SteelSite\Controllers;
 
-/**
- * Signup
- *
- * @module Controllers
- * @submodule Signup
- * @author Jason Lotito <jasonlotito@gmail.com>
- */
+    /**
+     * Signup
+     *
+     * @module Controllers
+     * @submodule Signup
+     * @author Jason Lotito <jasonlotito@gmail.com>
+     */
 /**
  * Signup Controller
  */
@@ -29,11 +29,14 @@ class Signup extends \Steel\Controller
     public function get()
     {
         $form = new \Steel\View\Form();
-        $form->addInput( 'First Name', 'firstName' , 'Jason');
-        $form->addInput( 'Last Name', 'lastName', 'Lotito' );
-        $form->addInput(['name'=>'email', 'id'=>'inputEmail','label'=>'Email Address', 'placeholder' => 'test@example.com']);
+        $form->addInput([
+                'name' => 'email',
+                'id' => 'inputEmail',
+                'label' => 'Email Address',
+                'placeholder' => 'test@example.com',
+                'description' => 'We won\'t spam you, we promise!',
+            ]);
         $this->attach('form', $form->render());
-
 
 //        $form->output();
         $this->output();

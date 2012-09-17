@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Signup>
-  <form><![CDATA[hello]]></form>
-  <name><![CDATA[BobJackson]]></name>
-</Signup>
+<Form>
+  <elements>
+    <elements>
+      <label><![CDATA[First Name]]></label>
+      <name><![CDATA[firstName]]></name>
+      <value><![CDATA[Pre-filled value]]></value>
+      <type><![CDATA[InputText]]></type>
+    </elements>
+    <elements>
+      <name><![CDATA[lName]]></name>
+      <label><![CDATA[Last Name]]></label>
+      <description><![CDATA[This is a description.]]></description>
+      <error><![CDATA[]]></error>
+      <type><![CDATA[InputText]]></type>
+    </elements>
+    <elements>
+      <name><![CDATA[lName]]></name>
+      <label><![CDATA[Last Name]]></label>
+      <description><![CDATA[This is a description. It's longer than a normal description.]]></description>
+      <error><![CDATA[]]></error>
+      <type><![CDATA[InputText]]></type>
+    </elements>
+    <elements>
+      <name><![CDATA[email]]></name>
+      <id><![CDATA[inputEmail]]></id>
+      <label><![CDATA[Email Address]]></label>
+      <placeholder><![CDATA[test@example.com]]></placeholder>
+      <error><![CDATA[1]]></error>
+      <type><![CDATA[InputText]]></type>
+    </elements>
+    <elements>
+      <name><![CDATA[email]]></name>
+      <id><![CDATA[inputEmail]]></id>
+      <label><![CDATA[Email Address]]></label>
+      <placeholder><![CDATA[test@example.com]]></placeholder>
+      <error><![CDATA[1]]></error>
+      <errorMessage><![CDATA[Custom error message.]]></errorMessage>
+      <errorLabel><![CDATA[Custom label]]></errorLabel>
+      <type><![CDATA[InputText]]></type>
+    </elements>
+    <elements>
+      <name><![CDATA[email]]></name>
+      <id><![CDATA[inputEmail]]></id>
+      <label><![CDATA[Email Address]]></label>
+      <placeholder><![CDATA[test@example.com]]></placeholder>
+      <error><![CDATA[1]]></error>
+      <errorMessage>
+        <![CDATA[Custom error message. This is a longer message. Much longer then you'd probably use normally. Or not. Cool, huh?]]></errorMessage>
+      <errorLabel><![CDATA[Custom label]]></errorLabel>
+      <type><![CDATA[InputText]]></type>
+    </elements>
+    <elements>
+      <label><![CDATA[Select Label]]></label>
+      <name><![CDATA[selectLabel]]></name>
+      <value>
+        <value><![CDATA[2]]></value>
+        <label><![CDATA[And yet another]]></label>
+      </value>
+      <element><![CDATA[Select]]></element>
+      <selected><![CDATA[Another option]]></selected>
+      <type><![CDATA[Select]]></type>
+    </elements>
+    <elements>
+      <label><![CDATA[Select Label]]></label>
+      <name><![CDATA[selectLabel]]></name>
+      <value>
+        <value><![CDATA[yetAnother]]></value>
+        <label><![CDATA[And yet another]]></label>
+      </value>
+      <element><![CDATA[Select]]></element>
+      <selected><![CDATA[Another option]]></selected>
+      <type><![CDATA[Select]]></type>
+    </elements>
+    <elements>
+      <label><![CDATA[Message]]></label>
+      <name><![CDATA[message]]></name>
+      <value><![CDATA[This is existing values.]]></value>
+      <type><![CDATA[TextArea]]></type>
+    </elements>
+  </elements>
+</Form>

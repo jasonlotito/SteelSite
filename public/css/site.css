@@ -13,32 +13,29 @@
 
 .goals {
     /*background: -webkit-gradient(*/
-        /*linear, left top, right top,*/
-        /*color-stop(0.0, rgba(0, 0, 0, 0.8)),*/
-        /*color-stop(0.65, rgba(255, 255, 255, 0))),*/
-
-        /*-webkit-gradient(*/
-            /*linear, right top, left top,*/
-            /*color-stop(0.0, rgba(0, 0, 0, .4)),*/
-            /*color-stop(0.65, rgba(255, 255, 255, 0))),*/
-
-        /*-webkit-gradient(*/
-            /*linear, right bottom, right top,*/
-            /*color-stop(0.0, rgba(0, 0, 0, .4)),*/
-            /*color-stop(0.65, rgba(255, 255, 255, 0))),*/
-
-        /*-webkit-gradient(*/
-            /*linear, right top, right bottom,*/
-            /*color-stop(0.0, rgba(0, 0, 0, .4)),*/
-            /*color-stop(0.65, rgba(255, 255, 255, 0)))*/
+    /*linear, left top, right top,*/
+    /*color-stop(0.0, rgba(0, 0, 0, 0.8)),*/
+    /*color-stop(0.65, rgba(255, 255, 255, 0))),*/
+    /*-webkit-gradient(*/
+    /*linear, right top, left top,*/
+    /*color-stop(0.0, rgba(0, 0, 0, .4)),*/
+    /*color-stop(0.65, rgba(255, 255, 255, 0))),*/
+    /*-webkit-gradient(*/
+    /*linear, right bottom, right top,*/
+    /*color-stop(0.0, rgba(0, 0, 0, .4)),*/
+    /*color-stop(0.65, rgba(255, 255, 255, 0))),*/
+    /*-webkit-gradient(*/
+    /*linear, right top, right bottom,*/
+    /*color-stop(0.0, rgba(0, 0, 0, .4)),*/
+    /*color-stop(0.65, rgba(255, 255, 255, 0)))*/
     /*;*/
-    background: rgba(255,255,255, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
     color: #000;
     text-shadow: none;
 }
 
-.goals h3{
+.goals h3 {
     margin-left: 10px;
     margin-bottom: 0;
 }
@@ -46,41 +43,29 @@
 .box {
     border-radius: 5px;
 }
+
 .box h2 {
     margin-left: 10px
 }
 
-.red.box
-{
-    background:     -webkit-gradient(
-        linear, right top, right bottom,
-        color-stop(0.0, rgba(155, 0, 0, .4)),
-        color-stop(0.85, rgba(255, 255, 255, 0))
-    )
+.red.box {
+    background: -webkit-gradient(linear, right top, right bottom, color-stop(0.0, rgba(155, 0, 0, .4)), color-stop(0.85, rgba(255, 255, 255, 0)))
 }
-.green.box
-{
-    background:     -webkit-gradient(
-        linear, right top, right bottom,
-        color-stop(0.0, rgba(0, 155, 0, .4)),
-        color-stop(0.85, rgba(255, 255, 255, 0))
-    )
+
+.green.box {
+    background: -webkit-gradient(linear, right top, right bottom, color-stop(0.0, rgba(0, 155, 0, .4)), color-stop(0.85, rgba(255, 255, 255, 0)))
 }
-.blue.box
-{
-    background:     -webkit-gradient(
-        linear, right top, right bottom,
-        color-stop(0.0, rgba(0, 0, 155, .4)),
-        color-stop(0.85, rgba(255, 255, 255, 0))
-    )
+
+.blue.box {
+    background: -webkit-gradient(linear, right top, right bottom, color-stop(0.0, rgba(0, 0, 155, .4)), color-stop(0.85, rgba(255, 255, 255, 0)))
 }
 
 footer {
-    border-top: 2px solid rgba(55,55,55,0.4);
+    border-top: 2px solid rgba(55, 55, 55, 0.4);
 }
 
 .highlight {
-    background-color: rgba(33,33,33,0.5);
+    background-color: rgba(33, 33, 33, 0.5);
     padding: 10px;
     border-radius: 5px;
 }
@@ -89,8 +74,50 @@ dd dl {
     margin: 0 0 20px 0;
 }
 
+section > dl > dt {
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+section > dl > dt a {
+    width: 100%;
+    color: #eee;
+    font-size: 110%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+dt tt {
+    font-size: 100%;
+}
+
+dt tt .method {
+    color: #000;
+}
+
+dt tt span {
+    color: #aaa;
+}
+
+dt:hover span {
+    color: #000;
+}
+
+dt:hover a {
+    color: #336699;
+}
+
+a:hover {
+    text-decoration: none;;
+}
+
+dl.attributes dt:before {
+    content: '• ';
+}
+
 dl.attributes dd.type {
-    color: rgba(0,55,100,1);
+    color: rgba(0, 55, 100, 1);
     font-weight: bold;
     font-style: italic;
     font-size: 100%;
@@ -102,11 +129,18 @@ dl.attributes dd.type:before {
 }
 
 dl.attributes dd.optional:before {
-    content: 'Optional ';
+    content: 'Optional – ';
     color: #ff4500;
+    color: rgba(255, 87, 0, 0.45);
 }
 
 dl.attributes dt {
     float: left;
     margin-right: 10px;
+}
+
+section > dl {
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(33,33,33, 0.5);
 }

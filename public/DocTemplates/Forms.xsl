@@ -27,9 +27,6 @@
                     <a href="#Input">Input</a>
                   </li>
                   <li>
-                    <a href="#Input">Input</a>
-                  </li>
-                  <li>
                     <a href="#Select">Select</a>
                   </li>
                   <li>
@@ -81,15 +78,29 @@
 
         <section>
           <h3>
-            <a name="Input">Input</a>
+            <a href="#Input" name="Input">Input</a>
           </h3>
 
           <h4>Interface</h4>
 
+          <ul>
+            <li><a href="#Input_addTextArea">addTextArea(string $label, string $name = null, string $value = '')</a></li>
+            <li><a href="#Input_addTextArea(array)">addTextArea(array $options)</a></li>
+            <li><a href="#Input_addInput">addInput(string $name, string $name = null, string $value = '')</a></li>
+            <li><a href="#Input_render">render()</a></li>
+            <li><a href="#Input_output">output()</a></li>
+          </ul>
+
+          <hr/>
+
           <dl>
             <dt>
-              <a name="Input_addTextArea"/>
-              <tt>addTextArea(string $label, string $name = null, string $value = '')</tt>
+              <a href="#Input_addTextArea" name="Input_addTextArea"> ¶ 
+                <tt>
+                  <span>Input::</span>
+                  <span class="method">addTextArea(string $label, string $name = null, string $value = '')</span>
+                </tt>
+              </a>
             </dt>
             <dd>Add a textarea element to the form.</dd>
             <dd>
@@ -106,10 +117,15 @@
               </dl>
             </dd>
             <dt>
-              <tt>addTextArea(array $options)</tt>
+              <a href="#Input_addTextArea(array)" name="Input_addTextArea(array)"> ¶ 
+                <tt>
+                  <span>Input::</span>
+                  <span class="method">addTextArea(array $options)</span>
+                </tt>
+              </a>
             </dt>
             <dd>
-              <dl>
+              <dl class="attributes">
                 <dt>$options</dt>
                 <dd>
                   <p>Array of options. Available keys:</p>
@@ -129,8 +145,12 @@
             </dd>
 
             <dt>
-              <a name="Input_addInput"/>
-              addInput(string $label, string $name = null, string $value = '')
+              <a href="#Input_addInput" name="Input_addInput"> ¶ 
+                <tt>
+                  <span>Input::</span>
+                  <span class="method">addInput(string $label, string $name = null, string $value = '')</span>
+                </tt>
+              </a>
             </dt>
             <dd>Add a textarea element to the form.</dd>
             <dd>
@@ -147,21 +167,29 @@
               </dl>
             </dd>
             <dt>
-              <a name="Input_render"/>
-              render()
+              <a href="#Input_render" name="Input_render"> ¶ 
+                <tt>
+                  <span>Input::</span>
+                  <span class="method">render()</span>
+                </tt>
+              </a>
             </dt>
             <dd>Add a textarea element to the form.</dd>
 
             <dt>
-              <a name="Input_output"/>
-              output()
+              <a href="#Input_output" name="Input_output"> ¶
+                <tt>
+                  <span>Input::</span>
+                  <span class="method">output()</span>
+                </tt>
+              </a>
             </dt>
             <dd>Add a textarea element to the form.</dd>
 
           </dl>
 
-          <h4>PHP</h4>
-          <h4>XSLT</h4>
+          <h4>PHP Usage</h4>
+          <h4>XSLT Implementation</h4>
           <h4>Output</h4>
         </section>
 
