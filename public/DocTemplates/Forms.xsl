@@ -3,8 +3,8 @@
   <xsl:include href="../Page.xsl"/>
 
   <xsl:template match="/Forms" name="Content">
-    <div class="row">
-      <div class="span3">
+    <div class="row docs">
+      <div class="span2">
         <div>
 
           <div data-spy="affix">
@@ -48,7 +48,7 @@
 
         </div>
       </div>
-      <div class="span9">
+      <div class="span10">
         <h1>Forms</h1>
 
         <h2>Elements</h2>
@@ -115,6 +115,9 @@
                 <dd class="type optional">string</dd>
                 <dd>Value attribute of the element.</dd>
               </dl>
+            </dd>
+            <dd>
+              <pre><em>Example…</em><br />$form->addTextArea( 'Label', 'nameOfElement', 'Pre-filled text' );</pre>
             </dd>
             <dt>
               <a href="#Input_addTextArea(array)" name="Input_addTextArea(array)"> ¶ 

@@ -36,6 +36,16 @@ class Signup extends \Steel\Controller
                 'placeholder' => 'test@example.com',
                 'description' => 'We won\'t spam you, we promise!',
             ]);
+        $form->addPassword([
+                'name' => 'password',
+                'label' => 'Password'
+            ]);
+        $form->addPassword([
+                'name' => 'vpassword',
+                'label' => 'Verify Password'
+
+            ]);
+        $form->addButton([ 'label' => 'Sign Up', 'class' => 'btn-primary']);
         $this->attach('form', $form->render());
 
 //        $form->output();

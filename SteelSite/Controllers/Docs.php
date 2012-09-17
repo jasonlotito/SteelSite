@@ -132,6 +132,9 @@ class Docs extends \Steel\Controller
             [ 'description' => 'Hey, this works! Yay!', 'error' => true ]
         );
         $form->addTextArea('Message', 'message', 'This is existing values.');
+        $form->addPassword([
+            'label' => 'password'
+        ]);
         $this->attach('form', $form->render());
 
         $this->output();
