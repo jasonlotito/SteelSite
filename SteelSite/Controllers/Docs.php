@@ -135,6 +135,9 @@ class Docs extends \Steel\Controller
         $form->addPassword([
             'label' => 'password'
         ]);
+
+        $form->addButton( 'Button Label' );
+
         $this->attach('form', $form->render());
 
         $this->output();

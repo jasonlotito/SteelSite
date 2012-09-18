@@ -55,7 +55,7 @@
 
         <section>
           <h3>
-            <a>Form</a>
+            <a name="Form" href="#Form">Form</a>
           </h3>
 
           <h4>Interface</h4>
@@ -67,7 +67,7 @@
 
         <section>
           <h3>
-            <a>Button</a>
+            <a name="Button" href="#Button">Button</a>
           </h3>
 
           <h4>Interface</h4>
@@ -198,7 +198,7 @@
 
         <section>
           <h3>
-            <a>Select</a>
+            <a name="Select" href="#Select">Select</a>
           </h3>
 
           <h4>Interface</h4>
@@ -209,7 +209,7 @@
 
         <section>
           <h3>
-            <a>TextArea</a>
+            <a name="TextArea" href="#TextArea">TextArea</a>
           </h3>
 
           <h4>Interface</h4>

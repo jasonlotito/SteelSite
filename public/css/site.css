@@ -154,3 +154,7 @@ section > dl {
 .docs .affix h4 {
     margin: 5px;
 }
+
+.docs pre {
+  margin-right: 10px;
+}
