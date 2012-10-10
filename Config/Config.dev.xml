@@ -3,7 +3,7 @@
     <renderer>XSLT</renderer>
     <baseTemplate>Base</baseTemplate>
     <templatesDir></templatesDir>
-    <steel>/Users/jasonlotito/Projects/SteelSite/Steel/View/Templates</steel>
+    <steel>/www/chainsw.com/Steel/View/Templates</steel>
 
     <!-- Cache Keys should be stored so we can bust cache
      One global cache key, and certain sections have their own so we can
@@ -46,6 +46,14 @@
 
         <method name="get">
             <class>Home</class>
+        </method>
+    </route>
+
+    <route>
+        <path>/facebook/signup</path>
+        <method name="get">
+            <class>Facebook</class>
+            <method>signup</method>
         </method>
     </route>
 

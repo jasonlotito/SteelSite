@@ -136,6 +136,12 @@ class Docs extends \Steel\Controller
             'label' => 'password'
         ]);
 
+        $form->addCheckbox([
+            'label' => 'Checkbox',
+            'name' => 'name',
+            'id' => 'cbName',
+        ]);
+
         $form->addButton( 'Button Label' );
 
         $this->attach('form', $form->render());

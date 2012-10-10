@@ -1,7 +1,7 @@
-php_value include_path ".:/Users/jasonlotito/Projects/SteelSite:/Applications/MAMP/bin/php/php5.4.4/lib/php"
+php_value include_path ".:/Users/jasonlotito/Projects/SteelSite:/www/chainsw.com"
 
 # Default Configuration
-SetEnvIfNoCase Host "steel" \
+SetEnvIfNoCase Host "chainsw|steel" \
     STEEL_APPLICATION_BASE=/Users/jasonlotito/Projects/SteelSite \
     STEEL_APPLICATION_CONF=0 \
     STEEL_APPLICATION_DEBUG=0 \
@@ -21,7 +21,7 @@ SetEnvIfNoCase Host "steel" \
     STEEL_LIB_DIR[Steel]=/Users/jasonlotito/Projects/SteelSite/Steel
 
 # Dev/Debugging Configuration
-SetEnvIfNoCase Host "steel.dbg|steel.dev" \
+SetEnvIfNoCase Host "dbg.chainsw|dev.chainsw|steel.dev" \
     STEEL_APPLICATION_ENV=development \
     \
     STEEL_CONFIG_EXT=.dev.xml \
@@ -31,7 +31,7 @@ SetEnvIfNoCase Host "steel.dbg|steel.dev" \
     STEEL_ERROR_DISPLAY=-1
 
 # Debugging Configuration
-SetEnvIfNoCase Host "steel.dbg" \
+SetEnvIfNoCase Host "dbg.chainsw|steel.dbg" \
     STEEL_APPLICATION_DEBUG=1
 
 # Test Configuration
@@ -39,7 +39,7 @@ SetEnvIfNoCase Host "steel.dbg" \
 # Staging Configuration
 
 # Production Configuration
-SetEnvIfNoCase Host "steel.prod" \
+SetEnvIfNoCase Host "prod.chainsw.com" \
     STEEL_APPLICATION_DIR=Steel \
     STEEL_APPLICATION_ENV=production
 

@@ -13,13 +13,13 @@
               <li>
                 <a href="#top">top</a>
               </li>
-              <li class="divider"></li>
+              <li class="divider"><![CDATA[]]></li>
               <li>Elements
                 <ol class="nav nav-list">
                   <li>
                     <a href="#Form">Form</a>
                   </li>
-                  <li class="divider"></li>
+                  <li class="divider"><![CDATA[]]></li>
                   <li>
                     <a href="#Button">Button</a>
                   </li>
@@ -34,7 +34,7 @@
                   </li>
                 </ol>
               </li>
-              <li class="divider"></li>
+              <li class="divider"><![CDATA[]]></li>
               <li>
                 Samples
                 <ol class="nav nav-list">

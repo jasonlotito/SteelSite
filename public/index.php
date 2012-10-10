@@ -5,6 +5,9 @@ namespace Steel;
 // by calling setIncludePath().  You can also add in additional include paths.
 require '../Steel/Bootstrap.php';
 
+use Steel\Anvil\Events\Debug;
+use Steel\Controller\Events\Flushed;
+
 /**
  * Anvil
  * Everything runs through Anvil.  It get's hit quite a bit.
@@ -41,8 +44,8 @@ class Anvil
 
     protected function initDebug()
     {
-        \Steel\Event::on('AnvilDebug', array($this, 'debug'));
-        \Steel\Event::on('ControllerFlushed', array($this, 'debug'));
+        \Steel\Event::on(new Debug(), array($this, 'debug'));
+        \Steel\Event::on(new Flushed(), array($this, 'debug'));
     }
 
     public function debug( )
